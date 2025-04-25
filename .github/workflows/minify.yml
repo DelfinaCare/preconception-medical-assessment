@@ -1,0 +1,35 @@
+name: Minify and Attach to Release
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm install -g terser clean-css-cli
+
+      - name: Minify JavaScript
+        run: terser questionnaire.js --compress --mangle --output questionnaire.min.js
+
+      - name: Minify CSS
+        run: cleancss -o questionnaire.min.css questionnaire.css
+
+      - name: Upload Assets to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            questionnaire.min.js
+            questionnaire.min.css
