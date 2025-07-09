@@ -58,4 +58,11 @@ https://github.com/DelfinaCare/preconception-medical-assessment.
 The use of the Delfina Care Inc logo is not permitted if the text of the quiz is changed, and
 is also not permitted if any of the elements of the quiz are hidden.
 
+The California Office of the Surgeon General (OSG) logo is is the protected property of OSG.
+OSG grants permission to embed the logo to users embedding an unmodified version of the
+Preconception Medical Assessment quiz contained in the parent repository at
+https://github.com/DelfinaCare/preconception-medical-assessment.
+The use of the OSG logo is not permitted if the text of the quiz is changed, and
+is also not permitted if any of the elements of the quiz are hidden.
+
 Open-sourced with ❤️ by Delfina
