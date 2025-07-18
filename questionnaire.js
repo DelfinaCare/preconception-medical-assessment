@@ -71,6 +71,7 @@ class PreconceptionMedicalAssessment {
           results: "Your Results",
           yes: "Yes",
           no: "No",
+          progress: "Your Progress", // Added new translation for progress tracker
         },
       },
       es: {
@@ -143,6 +144,7 @@ class PreconceptionMedicalAssessment {
           results: "Sus Resultados",
           yes: "Sí",
           no: "No",
+          progress: "Su Progreso", // Added new translation for progress tracker
         },
       },
     };
@@ -201,6 +203,12 @@ class PreconceptionMedicalAssessment {
               ${ui.tipsTitle}
             </h2>
             <ul class="tips-list"></ul>
+            
+            <!-- Added Progress Tracker Below Tips -->
+            <div class="question-progress">
+              <h3>${ui.progress}</h3>
+              <div class="progress-indicators"></div>
+            </div>
           </div>
         </div>
 
@@ -217,6 +225,7 @@ class PreconceptionMedicalAssessment {
 
     this.renderQuestions();
     this.renderTips();
+    this.renderProgressIndicators(); // Added call to render progress indicators
     this.setupValidation();
     this.setupLanguageToggle();
   }
@@ -268,6 +277,9 @@ class PreconceptionMedicalAssessment {
           return Array.from(questionRadios).some((r) => r.checked);
         });
 
+        // Update progress indicator when a question is answered
+        this.updateProgressIndicator();
+
         // Auto submit when all questions are answered
         if (allQuestionsAnswered) {
           this.handleSubmit();
@@ -284,6 +296,7 @@ class PreconceptionMedicalAssessment {
     this.questions.forEach((question) => {
       const questionElement = document.createElement("div");
       questionElement.className = "question-item";
+      questionElement.dataset.questionId = question.id; // Add data attribute for scrolling
       questionElement.innerHTML = `
         <p>${question.id}. ${question.text}</p>
         <div class="question-options">
@@ -308,6 +321,58 @@ class PreconceptionMedicalAssessment {
       const tipElement = document.createElement("li");
       tipElement.textContent = tip;
       tipsList.appendChild(tipElement);
+    });
+  }
+
+  // New method to render progress indicators
+  renderProgressIndicators() {
+    const progressContainer = document.querySelector(".progress-indicators");
+    progressContainer.innerHTML = "";
+
+    this.questions.forEach((question) => {
+      const indicator = document.createElement("div");
+      indicator.className = "progress-indicator";
+      indicator.dataset.questionId = question.id;
+      indicator.textContent = question.id;
+
+      // Add click event to scroll to the question
+      indicator.addEventListener("click", () => {
+        const questionElement = document.querySelector(
+          `.question-item[data-question-id="${question.id}"]`
+        );
+        if (questionElement) {
+          questionElement.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+          // Add a brief highlight effect to make the question more noticeable
+          questionElement.classList.add("highlight-question");
+          setTimeout(() => {
+            questionElement.classList.remove("highlight-question");
+          }, 1500);
+        }
+      });
+
+      progressContainer.appendChild(indicator);
+    });
+  }
+
+  // New method to update progress indicators when questions are answered
+  updateProgressIndicator() {
+    this.questions.forEach((question) => {
+      const questionRadios = document.getElementsByName(
+        `question${question.id}`
+      );
+      const isAnswered = Array.from(questionRadios).some((r) => r.checked);
+      const indicator = document.querySelector(
+        `.progress-indicator[data-question-id="${question.id}"]`
+      );
+
+      if (isAnswered) {
+        indicator.classList.add("answered");
+      } else {
+        indicator.classList.remove("answered");
+      }
     });
   }
 

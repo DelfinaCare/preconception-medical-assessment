@@ -235,6 +235,75 @@
   font-weight: 600;
 }
 
+/* Progress Tracker Styles */
+.question-progress {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.question-progress h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.progress-indicators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.progress-indicator {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.progress-indicator:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.progress-indicator.answered {
+  background-color: #4caf50;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.progress-indicator.answered:hover {
+  background-color: #43a047;
+  transform: scale(1.15);
+}
+
+/* Add highlight effect for questions */
+@keyframes highlight-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(233, 30, 99, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(233, 30, 99, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(233, 30, 99, 0);
+  }
+}
+
+.highlight-question {
+  animation: highlight-pulse 1.5s ease-out;
+  background-color: #ffeaef;
+}
+
 /* Results section */
 .result-section {
   width: 100%;
