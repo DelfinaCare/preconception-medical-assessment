@@ -497,6 +497,12 @@
   height: 20px;
 }
 
+.delfina-logo {
+  height: 20px;
+  vertical-align: middle;
+  margin: 0 4px;
+}
+
 /* Additional styles for questionnaire elements */
 .question-options {
   margin-top: 0.5rem;
