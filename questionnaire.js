@@ -218,7 +218,7 @@ class PreconceptionMedicalAssessment {
         </div>
 
         <div class="logo-placeholder">
-          This quiz was developed by the <a href="https://osg.ca.gov/prema/" target="_blank">California Office of the Surgeon General</a> <img src="proprietary_logos/ca_osg.png" alt="CA OSG logo" class="ca-osg-logo" /> and <a href="https://github.com/DelfinaCare/preconception-medical-assessment" target="_blank">open sourced</a> with &#10084; by <a href="https://delfina.com" target="_blank">Delfina</a> <img src="proprietary_logos/delfina.png" alt="Delfina logo" class="delfina-logo" />. This is not a substitute for medical advice.
+          This quiz was developed by the <a href="https://osg.ca.gov/prema/" target="_blank">California Office of the Surgeon General</a> <img src="proprietary_logos/ca_osg.png" alt="CA OSG logo" class="logo-img" /> and <a href="https://github.com/DelfinaCare/preconception-medical-assessment" target="_blank">open sourced</a> with &#10084; by <a href="https://delfina.com" target="_blank">Delfina</a> <img src="proprietary_logos/delfina.png" alt="Delfina logo" class="logo-img" />. This is not a substitute for medical advice.
         </div>
       </div>
     `;
