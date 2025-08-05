@@ -172,7 +172,11 @@ class PreconceptionMedicalAssessment {
       <div class="prema-container">
         <div class="prema-header">
           <div class="header-content">
-            <h1>${ui.title}</h1>
+            <div class="title-logo-container">
+              <h1>${ui.title}</h1>
+              <img src="https://delfinacare.github.io/preconception-medical-assessment/proprietary_logos/ca_osg.png" alt="CA OSG logo" class="header-logo">
+            </div>
+            
             <div class="language-selector">
               <button class="lang-dropdown-btn">
                 <span class="globe-icon">🌐</span>
@@ -218,7 +222,7 @@ class PreconceptionMedicalAssessment {
         </div>
 
         <div class="logo-placeholder">
-          This quiz was developed by the <a href="https://osg.ca.gov/prema/" target="_blank">California Office of the Surgeon General</a> <img src="proprietary_logos/ca_osg.png" alt="CA OSG logo" class="logo-img" /> and <a href="https://github.com/DelfinaCare/preconception-medical-assessment" target="_blank">open sourced</a> with &#10084; by <a href="https://delfina.com" target="_blank">Delfina</a> <img src="proprietary_logos/delfina.png" alt="Delfina logo" class="logo-img" />. This is not a substitute for medical advice.
+          This quiz was developed by the California Office of the Surgeon General</a> and <a href="https://github.com/DelfinaCare/preconception-medical-assessment" target="_blank">open sourced</a> with &#10084; by <a href="https://delfina.com" target="_blank">Delfina</a> <img src="proprietary_logos/delfina.png" alt="Delfina logo" class="logo-img" />. This is not a substitute for medical advice.
         </div>
       </div>
     `;
