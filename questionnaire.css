@@ -40,7 +40,7 @@
 }
 
 .prema-header h1 {
-  color: #e91e63;
+  color: #c01e66;
   font-size: 5rem;
   margin: 0;
   font-weight: 800;
@@ -78,18 +78,18 @@
   align-items: center;
   gap: 8px;
   padding: 10px 16px;
-  border: 2px solid #e91e63;
+  border: 2px solid #c01e66;
   background: white;
   cursor: pointer;
   border-radius: 6px;
   transition: all 0.3s ease;
   font-size: 0.9375rem;
   font-weight: 600;
-  color: #e91e63;
+  color: #c01e66;
 }
 
 .lang-dropdown-btn:hover {
-  background: #e91e63;
+  background: #c01e66;
   color: white;
 }
 
@@ -139,7 +139,7 @@
 }
 
 .lang-dropdown-content a.active {
-  background: #e91e63;
+  background: #c01e66;
   color: white;
 }
 
@@ -159,7 +159,7 @@
 
 /* Questions section */
 .prema-questions h2 {
-  color: #e91e63;
+  color: #c01e66;
   font-size: 1.75rem;
   margin-bottom: 1.5rem;
   font-weight: 600;
@@ -269,7 +269,7 @@
 }
 
 .submit-button-active {
-  background-color: #e91e63;
+  background-color: #c01e66;
   color: white;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(233, 30, 99, 0.2);
@@ -289,7 +289,7 @@
 /* Tips section */
 .prema-tips {
   width: 350px;
-  background: #e91e63;
+  background: #c01e66;
   color: white;
   padding: 1.5rem;
   border-radius: 6px;
