@@ -73,7 +73,8 @@ class PreconceptionMedicalAssessment {
           no: "No",
           progress: "Your Progress", // Added new translation for progress tracker
           faq_link_title: "Frequently Asked Questions",
-          faq_link_target: "https://osg.ca.gov/wp-content/uploads/sites/266/2025/01/PreMA-FAQ-English_web.pdf"
+          faq_link_target: "https://osg.ca.gov/wp-content/uploads/sites/266/2025/01/PreMA-FAQ-English_web.pdf",
+          find_help: "You can find local health and human services resources online at <a href='https://www.findhelp.org/' target='_blank'>FindHelp.org</a>"
         },
       },
       es: {
@@ -148,7 +149,8 @@ class PreconceptionMedicalAssessment {
           no: "No",
           progress: "Su Progreso",
           faq_link_title: "Preguntas Frecuentes",
-          faq_link_target: "https://osg.ca.gov/wp-content/uploads/sites/266/2025/03/PREMA-FAQ_v12_SP.pdf"
+          faq_link_target: "https://osg.ca.gov/wp-content/uploads/sites/266/2025/03/PREMA-FAQ_v12_SP.pdf",
+          find_help: "Puede encontrar recursos de salud y servicios humanos locales en línea en <a href='https://www.findhelp.org/' target='_blank'>FindHelp.org</a>"
         },
       },
     };
@@ -227,6 +229,7 @@ class PreconceptionMedicalAssessment {
 
 
         <h3><a href="${ui.faq_link_target}" target="_blank">${ui.faq_link_title}</a></h3>
+        <p>${ui.find_help}</p>
 
         <div class="logo-placeholder">
           This quiz was developed by the <a href="https://osg.ca.gov/prema/">Office of the California Surgeon General</a> <img src="https://delfinacare.github.io/preconception-medical-assessment/proprietary_logos/ca_osg.png" alt="logo of the Office of the CA Surgeon General logo" class="logo-img" /> and <a href="https://github.com/DelfinaCare/preconception-medical-assessment" target="_blank">open sourced</a> with &#10084; by <a href="https://delfina.com" target="_blank">Delfina</a> <img src="https://delfinacare.github.io/preconception-medical-assessment/proprietary_logos/delfina.png" alt="Delfina logo" class="logo-img" />. This is not a substitute for medical advice. Read more <a href="https://osg.ca.gov/wp-content/uploads/sites/266/2025/01/PreMA-FAQ-English_web.pdf" target="_blank">here</a>.
