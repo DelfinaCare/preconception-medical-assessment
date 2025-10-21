@@ -72,6 +72,8 @@ class PreconceptionMedicalAssessment {
           yes: "Yes",
           no: "No",
           progress: "Your Progress", // Added new translation for progress tracker
+          faq_link_title: "Frequently Asked Questions",
+          faq_link_target: "https://osg.ca.gov/wp-content/uploads/sites/266/2025/01/PreMA-FAQ-English_web.pdf"
         },
       },
       es: {
@@ -144,7 +146,9 @@ class PreconceptionMedicalAssessment {
           results: "Sus Resultados",
           yes: "Sí",
           no: "No",
-          progress: "Su Progreso", // Added new translation for progress tracker
+          progress: "Su Progreso",
+          faq_link_title: "Preguntas Frecuentes",
+          faq_link_target: "https://osg.ca.gov/wp-content/uploads/sites/266/2025/03/PREMA-FAQ_v12_SP.pdf"
         },
       },
     };
@@ -220,6 +224,9 @@ class PreconceptionMedicalAssessment {
           <h2>${ui.results}</h2>
           <div class="result-content"></div>
         </div>
+
+
+        <h3><a href="${ui.faq_link_target}" target="_blank">${ui.faq_link_title}</a></h3>
 
         <div class="logo-placeholder">
           This quiz was developed by the <a href="https://osg.ca.gov/prema/">Office of the California Surgeon General</a> <img src="https://delfinacare.github.io/preconception-medical-assessment/proprietary_logos/ca_osg.png" alt="logo of the Office of the CA Surgeon General logo" class="logo-img" /> and <a href="https://github.com/DelfinaCare/preconception-medical-assessment" target="_blank">open sourced</a> with &#10084; by <a href="https://delfina.com" target="_blank">Delfina</a> <img src="https://delfinacare.github.io/preconception-medical-assessment/proprietary_logos/delfina.png" alt="Delfina logo" class="logo-img" />. This is not a substitute for medical advice. Read more <a href="https://osg.ca.gov/wp-content/uploads/sites/266/2025/01/PreMA-FAQ-English_web.pdf" target="_blank">here</a>.
