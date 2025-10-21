@@ -180,7 +180,7 @@ class PreconceptionMedicalAssessment {
           <div class="header-content">
             <div class="title-logo-container">
               <h1>${ui.title}</h1>
-              <img src="https://delfinacare.github.io/preconception-medical-assessment/proprietary_logos/ca_osg.png" alt="CA OSG logo" class="header-logo">
+              <a href="https://osg.ca.gov/prema/" target="_blank"><img src="https://delfinacare.github.io/preconception-medical-assessment/proprietary_logos/ca_osg.png" alt="CA OSG logo" class="header-logo"></a>
             </div>
             
             <div class="language-selector">
