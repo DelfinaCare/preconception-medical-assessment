@@ -177,19 +177,19 @@ class PreconceptionMedicalAssessment {
     container.innerHTML = `
       <div class="prema-container">
         <div class="prema-header">
-          <div class="header-content">
-            <div class="title-logo-container">
+          <div class="prema-header-content">
+            <div class="prema-title-logo-container">
               <h1>${ui.title}</h1>
-              <a href="https://osg.ca.gov/prema/" target="_blank"><img src="https://delfinacare.github.io/preconception-medical-assessment/proprietary_logos/ca_osg.png" alt="CA OSG logo" class="header-logo"></a>
+              <a href="https://osg.ca.gov/prema/" target="_blank"><img src="https://delfinacare.github.io/preconception-medical-assessment/proprietary_logos/ca_osg.png" alt="CA OSG logo" class="prema-header-logo"></a>
             </div>
             
-            <div class="language-selector">
-              <button class="lang-dropdown-btn">
-                <span class="globe-icon">🌐</span>
+            <div class="prema-language-selector">
+              <button class="prema-lang-dropdown-btn">
+                <span class="prema-icon">🌐</span>
                 <span class="current-lang">${this.currentLang.toUpperCase()}</span>
-                <span class="dropdown-arrow">▼</span>
+                <span class="prema-dropdown-arrow">▼</span>
               </button>
-              <div class="lang-dropdown-content">
+              <div class="prema-lang-dropdown-content">
                 <a href="#" data-lang="en" class="${
                   this.currentLang === "en" ? "active" : ""
                 }">English</a>
@@ -209,22 +209,22 @@ class PreconceptionMedicalAssessment {
           </div>
           <div class="prema-tips">
             <h2>
-              <span class="tips-icon">✨</span>
+              <span class="prima-icon">✨</span>
               ${ui.tipsTitle}
             </h2>
-            <ul class="tips-list"></ul>
+            <ul class="prema-tips-list"></ul>
             
             <!-- Added Progress Tracker Below Tips -->
-            <div class="question-progress">
+            <div class="prema-question-progress">
               <h3>${ui.progress}</h3>
-              <div class="progress-indicators"></div>
+              <div class="prema-progress-indicators"></div>
             </div>
           </div>
         </div>
 
-        <div class="result-section" style="display: none;">
+        <div class="prema-result-section" style="display: none;">
           <h2>${ui.results}</h2>
-          <div class="result-content"></div>
+          <div class="prema-result-content"></div>
         </div>
 
 
@@ -232,7 +232,7 @@ class PreconceptionMedicalAssessment {
         <p>${ui.find_help}</p>
 
         <div class="logo-placeholder">
-          This quiz was developed by the <a href="https://osg.ca.gov/prema/">Office of the California Surgeon General</a> <img src="https://delfinacare.github.io/preconception-medical-assessment/proprietary_logos/ca_osg.png" alt="logo of the Office of the CA Surgeon General logo" class="logo-img" /> and <a href="https://github.com/DelfinaCare/preconception-medical-assessment" target="_blank">open sourced</a> with &#10084; by <a href="https://delfina.com" target="_blank">Delfina</a> <img src="https://delfinacare.github.io/preconception-medical-assessment/proprietary_logos/delfina.png" alt="Delfina logo" class="logo-img" />. This is not a substitute for medical advice. Read more <a href="https://osg.ca.gov/wp-content/uploads/sites/266/2025/01/PreMA-FAQ-English_web.pdf" target="_blank">here</a>.
+          This quiz was developed by the <a href="https://osg.ca.gov/prema/">Office of the California Surgeon General</a> <img src="https://delfinacare.github.io/preconception-medical-assessment/proprietary_logos/ca_osg.png" alt="logo of the Office of the CA Surgeon General logo" class="prema-logo-img" /> and <a href="https://github.com/DelfinaCare/preconception-medical-assessment" target="_blank">open sourced</a> with &#10084; by <a href="https://delfina.com" target="_blank">Delfina</a> <img src="https://delfinacare.github.io/preconception-medical-assessment/proprietary_logos/delfina.png" alt="Delfina logo" class="prema-logo-img" />. This is not a substitute for medical advice. Read more <a href="https://osg.ca.gov/wp-content/uploads/sites/266/2025/01/PreMA-FAQ-English_web.pdf" target="_blank">here</a>.
         </div>
       </div>
     `;
@@ -245,10 +245,10 @@ class PreconceptionMedicalAssessment {
   }
 
   setupLanguageToggle() {
-    const langSelector = document.querySelector(".language-selector");
-    const dropdownBtn = document.querySelector(".lang-dropdown-btn");
+    const langSelector = document.querySelector(".prema-language-selector");
+    const dropdownBtn = document.querySelector(".prema-lang-dropdown-btn");
     const dropdownOptions = document.querySelectorAll(
-      ".lang-dropdown-content a"
+      ".prema-lang-dropdown-content a"
     );
 
     // Toggle dropdown
@@ -309,11 +309,11 @@ class PreconceptionMedicalAssessment {
 
     this.questions.forEach((question) => {
       const questionElement = document.createElement("div");
-      questionElement.className = "question-item";
+      questionElement.className = "prema-question-item";
       questionElement.dataset.questionId = question.id; // Add data attribute for scrolling
       questionElement.innerHTML = `
         <p>${question.id}. ${question.text}</p>
-        <div class="question-options">
+        <div class="prema-question-options">
           <label>
             <input type="radio" name="question${question.id}" value="yes">
             <span>${ui.yes}</span>
@@ -329,7 +329,7 @@ class PreconceptionMedicalAssessment {
   }
 
   renderTips() {
-    const tipsList = document.querySelector(".tips-list");
+    const tipsList = document.querySelector(".prema-tips-list");
     tipsList.innerHTML = ""; // Clear existing tips
     this.tips.forEach((tip) => {
       const tipElement = document.createElement("li");
@@ -340,19 +340,19 @@ class PreconceptionMedicalAssessment {
 
   // New method to render progress indicators
   renderProgressIndicators() {
-    const progressContainer = document.querySelector(".progress-indicators");
+    const progressContainer = document.querySelector(".prema-progress-indicators");
     progressContainer.innerHTML = "";
 
     this.questions.forEach((question) => {
       const indicator = document.createElement("div");
-      indicator.className = "progress-indicator";
+      indicator.className = "prema-progress-indicator";
       indicator.dataset.questionId = question.id;
       indicator.textContent = question.id;
 
       // Add click event to scroll to the question
       indicator.addEventListener("click", () => {
         const questionElement = document.querySelector(
-          `.question-item[data-question-id="${question.id}"]`
+          `.prema-question-item[data-question-id="${question.id}"]`
         );
         if (questionElement) {
           questionElement.scrollIntoView({
@@ -360,9 +360,9 @@ class PreconceptionMedicalAssessment {
             block: "center",
           });
           // Add a brief highlight effect to make the question more noticeable
-          questionElement.classList.add("highlight-question");
+          questionElement.classList.add("prema-highlight-question");
           setTimeout(() => {
-            questionElement.classList.remove("highlight-question");
+            questionElement.classList.remove("prema-highlight-question");
           }, 1500);
         }
       });
@@ -379,7 +379,7 @@ class PreconceptionMedicalAssessment {
       );
       const isAnswered = Array.from(questionRadios).some((r) => r.checked);
       const indicator = document.querySelector(
-        `.progress-indicator[data-question-id="${question.id}"]`
+        `.prema-progress-indicator[data-question-id="${question.id}"]`
       );
 
       if (isAnswered) {
@@ -420,15 +420,15 @@ class PreconceptionMedicalAssessment {
       riskIcon = "✓"; // Checkmark for low risk
     }
 
-    const resultSection = document.querySelector(".result-section");
-    const resultContent = document.querySelector(".result-content");
+    const resultSection = document.querySelector(".prema-result-section");
+    const resultContent = document.querySelector(".prema-result-content");
     resultContent.innerHTML = `
-      <div class="result-box ${riskLevel}">
-        <div class="result-header">
-          <span class="result-count">${result.count}</span>
-          <span class="result-icon">${riskIcon}</span>
+      <div class="prema-result-box prema-${riskLevel}">
+        <div class="prema-result-header">
+          <span class="prema-result-count">${result.count}</span>
+          <span class="prema-result-icon">${riskIcon}</span>
         </div>
-        <p class="result-message">${result.message}</p>
+        <p class="prema-result-message">${result.message}</p>
       </div>
     `;
     resultSection.style.display = "block";
