@@ -36,6 +36,13 @@ To add this questionnaire to your website, simply add:
 <script src="https://cdn.jsdelivr.net/gh/DelfinaCare/preconception-medical-assessment@latest/questionnaire.min.js"></script>
 ```
 
+Alternatively, if you can embed using an iframe with the following code. You
+may have to modify the width and height attributes.
+
+```html
+<iframe src="https://cdn.jsdelivr.net/gh/DelfinaCare/preconception-medical-assessment@latest/embed.html"></iframe>
+```
+
 ## Disclaimer
 
 Delfina Care Inc is not a medical group and does not provide medical advice, care, or treatment.
