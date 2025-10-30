@@ -37,10 +37,18 @@ To add this questionnaire to your website, simply add:
 ```
 
 Alternatively, if you can embed using an iframe with the following code. You
-may have to modify the width and height attributes.
+may have to modify the width and height attributes. If you use percentages,
+those are computed relative to the parent element for iframes.
 
 ```html
-<iframe src="https://cdn.jsdelivr.net/gh/DelfinaCare/preconception-medical-assessment@latest/embed.html"></iframe>
+<iframe src="https://delfinacare.github.io/preconception-medical-assessment/embed.html"></iframe>
+```
+
+For example, if you want a full-screen embed, this is how how you woud do it.
+```html
+<div style="width: 100%; height: 100vh;">
+  <iframe src="https://delfinacare.github.io/preconception-medical-assessment/embed.html" style="border: none;" width="100%" height="100%"></iframe>
+</div>
 ```
 
 ## Disclaimer
