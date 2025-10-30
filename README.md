@@ -46,7 +46,7 @@ those are computed relative to the parent element for iframes.
 
 For example, if you want a full-screen embed, this is how how you woud do it.
 ```html
-<div style="width: 100%; height: 100vh;">
+<div style="width: 100vw; height: 100vh;">
   <iframe src="https://delfinacare.github.io/preconception-medical-assessment/embed.html" style="border: none;" width="100%" height="100%"></iframe>
 </div>
 ```
