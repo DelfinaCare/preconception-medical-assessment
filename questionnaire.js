@@ -62,9 +62,9 @@ class PreconceptionMedicalAssessment {
           },
         },
         ui: {
-          title: "Thinking About Having a Baby?",
+          title: "Thinking about your health?",
           subtitle:
-            "Your health and well-being are important. Let's make sure you are strong and ready, so when you do decide to get pregnant, you'll be set to feel your best.",
+            "Your health and well-being are important. Let's make sure you are strong and ready, so when you decide to get pregnant, you'll feel your best.",
           quizTitle: "Take the PreMA (Preconception Medical Assessment) Quiz",
           tipsTitle: "Tips for Everyone",
           submit: "Submit Questionnaire",
@@ -138,7 +138,7 @@ class PreconceptionMedicalAssessment {
           },
         },
         ui: {
-          title: "¿Está pensando en tener un bebé?",
+          title: "¿Has pensado de tu salud?",
           subtitle:
             "Su salud y bienestar son importantes. Asegurémonos de que esté fuerte y preparada, para que cuando decida quedar embarazada, se sienta lo mejor posible.",
           quizTitle:
